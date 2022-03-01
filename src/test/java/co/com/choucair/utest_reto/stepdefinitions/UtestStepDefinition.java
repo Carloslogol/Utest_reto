@@ -1,33 +1,50 @@
 package co.com.choucair.utest_reto.stepdefinitions;
 
-import io.cucumber.java.Before;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import co.com.choucair.utest_reto.model.Utest_data;
+import co.com.choucair.utest_reto.tasks.FillPageDevice;
+import co.com.choucair.utest_reto.tasks.FillPageInfo;
+import co.com.choucair.utest_reto.tasks.FillPageLocation;
+import co.com.choucair.utest_reto.tasks.OpenPageUtest;
+import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+
+import java.util.List;
+
+import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
+import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class UtestStepDefinition {
 
     @Before
     public void setStage() {
-        OnStage.setTheStage(new OnlineCast())
+        OnStage.setTheStage(new OnlineCast());
     }
 
-    @Given("User wants to register")
+    @Given("^User wants to register$")
     public void userWantsToRegister() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+        theActorCalled("User").wasAbleTo(OpenPageUtest.page());
+
     }
-    @When("Complete registration information")
-    public void completeRegistrationInformation() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+    @When("^Complete registration information$")
+    public void completeRegistrationInformation(List<Utest_data> data) {
+
+        theActorInTheSpotlight().attemptsTo(FillPageInfo.page(data), FillPageLocation.page(data),
+                FillPageDevice.page(data));
+
     }
-    @Then("Complete registration")
+
+    @Then("^Complete registration$")
     public void completeRegistration() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+
+
     }
 
 }

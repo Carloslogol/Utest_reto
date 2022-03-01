@@ -1,7 +1,8 @@
 package co.com.choucair.utest_reto.runners;
 
 
-import io.cucumber.junit.CucumberOptions;
+import cucumber.api.CucumberOptions;
+import cucumber.api.SnippetType;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.runner.RunWith;
 
@@ -9,7 +10,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(features = "src/test/resources/features/user_register.feature",
                     tags = "@Stories",
                     glue = "co.com.choucair.utest_reto.stepdefinitions",
-                    snippets = CucumberOptions.SnippetType.CAMELCASE)
+                    snippets = SnippetType.CAMELCASE)
 
 public class RunnerTags {
 }
