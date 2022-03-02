@@ -2,7 +2,6 @@ package co.com.choucair.utest_reto.userinterface;
 
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;
-import org.apache.xpath.XPath;
 import org.openqa.selenium.By;
 
 public class PageFinish  extends PageObject {
@@ -23,6 +22,6 @@ public class PageFinish  extends PageObject {
             .located(By.xpath("/html/body/ui-view/main/section/div/div[2]/div/div[2]/div/form/div[6]/label/span[1]"));
 
     public static final Target BUTTON_FINISH = Target.the("Button for finish")
-            .located(By.xpath("//html/body/ui-view/main/section/div/div[2]/div/div[2]/div/div[2]/div/a"));
+            .located(By.xpath("//a[contains(@class, 'btn btn-blue')]"));
 
 }

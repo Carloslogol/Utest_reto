@@ -3,7 +3,7 @@ package co.com.choucair.utest_reto.model;
 public class Utest_data {
 
     private String name, lastName, email, birthMonth, birthDay, birthYear, city, zip, country;
-    private String computer, version, languaje, movilDevice, modelDevice, os;
+    private String computer, version, languaje, movilDevice, modelDevice, os, pass, textFinal;
 
     public String getName() {
         return name;
@@ -123,5 +123,21 @@ public class Utest_data {
 
     public void setOs(String os) {
         this.os = os;
+    }
+
+    public String getPass() {
+        return pass;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
+
+    public String getTextFinal() {
+        return textFinal;
+    }
+
+    public void setTextFinal(String textFinal) {
+        this.textFinal = textFinal;
     }
 }
