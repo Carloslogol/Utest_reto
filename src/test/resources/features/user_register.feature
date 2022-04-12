@@ -1,11 +1,13 @@
 #Author: Carlos Cogollo
 
-  @Stories
-
+  @UserRegistration
   Feature: User registration in Utest
 
-    @Scenario:
-      Scenario: Registration process
+    As a internet user
+    I want to register in Utest
+
+    @Successfulregistration
+      Scenario: successful registration process
         Given User wants to register
         When Complete registration information
           | name   | lastName | email                     | birthMonth | birthDay | birthYear | city     | zip    | country  | computer | version | languaje | movilDevice | modelDevice       | os         | pass               |
