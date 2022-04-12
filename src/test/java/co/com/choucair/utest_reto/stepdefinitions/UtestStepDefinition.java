@@ -1,7 +1,6 @@
 package co.com.choucair.utest_reto.stepdefinitions;
 
 import co.com.choucair.utest_reto.model.UserInformation;
-import co.com.choucair.utest_reto.questions.AnswerRegistration;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
